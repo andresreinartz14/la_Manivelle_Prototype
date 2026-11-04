@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {todayKey,addDays,daysBetween,isOpen,earliestDate,validateRange,available,inactivityStatus} from '../dist/domain.mjs';
+import {todayKey,addDays,daysBetween,isOpen,earliestDate,validateRange,available,inactivityStatus,preparationSegments} from '../dist/domain.mjs';
 const today='2026-11-04';
 const check=(a,b,branch='paquis',blocked=[])=>validateRange(a,b,branch,{today,blocked});
 
@@ -22,6 +22,15 @@ test('two-day preparation is enforced, skipping closed pickup days',()=>{
   assert.equal(earliestDate('paquis',today),'2026-11-06');
   assert.equal(earliestDate('paquis','2026-11-05'),'2026-11-10');
   assert.equal(earliestDate('charmilles','2026-11-05'),'2026-11-07');
+});
+test('preparation bars cover exactly two days and wrap across calendar weeks',()=>{
+  assert.deepEqual(preparationSegments('2026-11','2026-11-04'),[{row:2,column:3,span:2}]);
+  assert.deepEqual(preparationSegments('2026-11','2026-11-08'),[{row:2,column:7,span:1},{row:3,column:1,span:1}]);
+});
+test('preparation bars split correctly between months and years',()=>{
+  assert.deepEqual(preparationSegments('2026-12','2026-12-31'),[{row:5,column:4,span:1}]);
+  assert.deepEqual(preparationSegments('2027-01','2026-12-31'),[{row:1,column:5,span:1}]);
+  assert.deepEqual(preparationSegments('2027-02','2026-12-31'),[]);
 });
 test('maximum seven-day range includes closed intermediate days',()=>{
   assert.equal(check('2026-11-06','2026-11-13'),'');

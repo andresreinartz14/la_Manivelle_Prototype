@@ -38,6 +38,18 @@ export const PRODUCTS = [
 export function todayKey(now = new Date()) { return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Zurich',year:'numeric',month:'2-digit',day:'2-digit'}).format(now); }
 export function addDays(key,n) { const d=new Date(key+'T12:00:00Z'); d.setUTCDate(d.getUTCDate()+n); return d.toISOString().slice(0,10); }
 export function daysBetween(a,b) { return Math.round((Date.parse(b+'T12:00:00Z')-Date.parse(a+'T12:00:00Z'))/86400000); }
+export function preparationSegments(month,today=todayKey()) {
+  const offset=(new Date(month+'-01T12:00:00Z').getUTCDay()+6)%7;
+  const segments=[];
+  for(let day=0;day<2;day++) {
+    const key=addDays(today,day);
+    if(key.slice(0,7)!==month)continue;
+    const index=offset+Number(key.slice(8))-1,row=Math.floor(index/7)+1,column=index%7+1,last=segments.at(-1);
+    if(last&&last.row===row&&last.column+last.span===column)last.span++;
+    else segments.push({row,column,span:1});
+  }
+  return segments;
+}
 export function isOpen(key,branch) { const day=new Date(key+'T12:00:00Z').getUTCDay(); return day>=2 && day<=5 || day===6 && (branch==='charmilles' || branch==='all'); }
 export function earliestDate(branch,today=todayKey()) { let key=addDays(today,2); while(!isOpen(key,branch)) key=addDays(key,1); return key; }
 export function validateRange(start,end,branch,{today=todayKey(),blocked=[]}={}) {

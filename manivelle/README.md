@@ -26,6 +26,10 @@ npm run check
 6. Dans `</>`, afficher la bannière, générer un bilan mensuel ou un avertissement d’inactivité, puis tester la désactivation du compte. La newsletter exige l’opt-in, modifiable dans « Mon compte ».
 7. Réinitialiser la démonstration depuis le même menu.
 
+Les deux jours de préparation sont marqués par une barre grise « Préparation » dans le calendrier du catalogue et celui de chaque objet. Son explication apparaît au survol, au focus clavier ou au toucher. Le marquage se répartit correctement quand les deux jours chevauchent une semaine ou un mois.
+
+Une recherche sans résultat propose un formulaire de suggestion d’objet, accessible même sans compte et prérempli avec la recherche. La demande est enregistrée dans le navigateur ; « Suggestions d’objets » dans le menu `</>` permet de consulter la boîte de réception simulée. Aucun message n’est transmis à La Manivelle. La réinitialisation de la démonstration efface également ces suggestions.
+
 ## Périmètre et données
 
 - Application statique, sans serveur d’authentification, paiement, synchronisation myTurn ou réservation réelle.
