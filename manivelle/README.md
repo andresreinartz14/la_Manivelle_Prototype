@@ -18,6 +18,10 @@ npm run check
 
 ## Parcours de démonstration
 
+Le sélecteur en haut de page bascule l’interface entre français et anglais. Le choix est conservé après rechargement. Les noms et descriptions des 50 objets, filtres, formulaires, calendriers, messages de validation et outils de démonstration sont traduits. La recherche retrouve les objets par leur nom français ou anglais. Les textes saisis par les visiteurs restent dans leur langue d’origine.
+
+Le catalogue comporte 50 objets avec des identifiants distincts et des photos locales. Les commandes permettent d’afficher 15, 30 ou 50 objets par page ; la pagination donne accès à toute la sélection. Les 35 objets supplémentaires reprennent des noms et photos du catalogue public de La Manivelle, avec des tarifs et disponibilités indicatifs pour les tests.
+
 1. Explorer le catalogue sans compte, voir les prix, filtrer par dates, catégorie ou disponibilité et choisir l’antenne de retrait.
 2. Ouvrir « Effet lumineux LED Butterfly ». Sélectionner deux dates directement dans le calendrier et ajouter au panier.
 3. Ajouter un autre objet avec des dates différentes. Les petits et moyens objets de la sélection peuvent être transférés vers une autre antenne avec deux jours de préparation.
@@ -46,6 +50,8 @@ Une recherche sans résultat propose un formulaire de suggestion d’objet, acce
 
 - `dist/app.mjs` : interface, parcours, profils et messages.
 - `dist/domain.mjs` : catalogue, antennes et règles de dates.
+- `dist/extra-products.mjs` et `dist/catalogue-en.mjs` : objets supplémentaires et traductions du catalogue initial.
+- `dist/i18n.mjs` : traductions de l’interface en anglais et préservation des données saisies.
 - `dist/styles.css` : style myTurn et adaptation mobile.
 - `tests/domain.test.mjs` : tests des règles métier de dates et d’inactivité.
 - `server.mjs` : serveur statique local sans dépendances.

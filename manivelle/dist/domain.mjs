@@ -1,3 +1,6 @@
+import {EXTRA_PRODUCTS} from './extra-products.mjs';
+import {CATALOGUE_EN} from './catalogue-en.mjs';
+
 export const BRANCHES = {
   charmilles: {name:'Charmilles (MACO)',address:'Chemin des Sports 87',city:'1203 Genève',phone:'+41 77 525 70 68',hours:'Du mardi au vendredi : 12h00–19h00',saturday:'10h00–15h00'},
   lancy: {name:'Lancy',address:'Avenue des Communes-Réunies 62',city:'1212 Lancy',phone:'+41 77 444 03 19',hours:'Du mardi au vendredi : 14h00–19h00'},
@@ -34,7 +37,7 @@ export const PRODUCTS = [
   {id:5392,name:'Nintendo SWITCH 1ère génération',asset:'0abd22f7f353be52.jpg',branch:'paquis',category:'Audio-Vidéo / Multimédia',tags:['Loisirs / Hobbies'],price:10,description:'Une console à partager pour une soirée jeux entre amis ou en famille.',specs:{Fabricant:'Nintendo',Inclus:'Console, manettes, station'},busyOffset:9},
   {id:6137,name:'Perceuse à percussion / visseuse Makita',asset:'83c23f800d2d8f94.png',branch:'lancy',category:'Travaux / Bricolage',tags:['Perceuses / Visseuses / Perforateurs','Outils manuels'],price:8,description:'Percez et vissez pour donner vie à vos petits et grands projets de bricolage.',specs:{Fabricant:'Makita',Alimentation:'Batterie',Inclus:'Coffret et chargeur'}},
   {id:7353,name:'Pistolet à tufter – Tufting gun',asset:'e7f1e3da522767b8.jpeg',branch:'lancy',category:'Loisirs / Hobbies',tags:['Habitat'],price:12,description:'Créez vos propres tapis et pièces textiles avec ce pistolet à tufter.',specs:{Alimentation:'230 V',Utilisation:'Création textile'}}
-];
+].concat(EXTRA_PRODUCTS).map(product=>({...product,...CATALOGUE_EN[product.id]}));
 export function todayKey(now = new Date()) { return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Zurich',year:'numeric',month:'2-digit',day:'2-digit'}).format(now); }
 export function addDays(key,n) { const d=new Date(key+'T12:00:00Z'); d.setUTCDate(d.getUTCDate()+n); return d.toISOString().slice(0,10); }
 export function daysBetween(a,b) { return Math.round((Date.parse(b+'T12:00:00Z')-Date.parse(a+'T12:00:00Z'))/86400000); }

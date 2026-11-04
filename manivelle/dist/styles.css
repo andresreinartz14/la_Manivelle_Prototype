@@ -41,12 +41,31 @@
 .request-actions .button .icon{width:15px;height:15px}
 .request-actions .text-link{font-size:11px}
 .requests-dialog{width:620px}
+.language-switcher{display:flex;align-items:center;gap:6px;color:#454c55}
+.language-switcher>.icon{width:17px;height:17px}
+.language-switcher select{width:88px;min-height:32px;border:0;background:transparent;padding:4px 16px 4px 2px;font-size:12px;cursor:pointer}
+.pagination-controls{display:flex;align-items:center;gap:4px}
+.pagination-page{display:inline-flex;align-items:center;justify-content:center;min-width:30px;height:30px;border:1px solid #e0e5ed;border-radius:3px;background:#fff;color:#718099;font-size:11px;padding:0 7px}
+.pagination-page:hover{background:#edf2f9}
+.pagination-page.pagination-current{background:var(--blue);border-color:var(--blue);color:#fff}
+.pagination-controls>.icon-button{min-width:28px;min-height:30px;padding:5px}
+.pagination-controls>.icon-button .icon{width:13px;height:13px}
+html[lang=en] .calendar-header h3{text-transform:none}
 .request-list{display:flex;flex-direction:column;gap:14px;margin-top:21px}
 .request-entry{padding:17px 19px;border:1px solid #e2e7ee;border-radius:3px;background:#fafbfd}
 .request-entry>div{display:flex;align-items:center;gap:10px;color:#8b96a5;font-size:10px}
 .request-entry>p{margin:12px 0 7px;color:#526175;font-size:12px;line-height:1.8;white-space:pre-wrap;overflow-wrap:anywhere}
 .request-entry>small{display:block;font-size:10px;color:#909aa8;overflow-wrap:anywhere}
 @media(max-width:600px){
+  .header-inner .brand{width:100px}
+  .language-switcher{gap:0}
+  .language-switcher>.icon{display:none}
+  .language-switcher select{width:61px;min-height:30px;padding:3px 10px 3px 0;font-size:9px}
+  .header-actions>.header-link{font-size:9px;max-width:55px;padding:0 4px}
+  .catalogue-bottom{gap:8px;font-size:9px}
+  .pagination-controls{gap:3px}
+  .pagination-page{min-width:26px;height:28px;font-size:10px;padding:0 5px}
+  .pagination-controls>.icon-button{min-width:23px;padding:3px}
   .preparation-tooltip>span{font-size:10px;padding:9px 11px}
   .object-request{padding:25px 22px}
   .object-request h2{font-size:20px;line-height:1.5}
