@@ -231,6 +231,7 @@ Autre|Other
 Code postal|Postal code
 Téléphone|Phone
 Langue|Language
+Choisissez le français ou l’anglais.|Choose French or English.
 Genre|Gender
 Sélectionner|Select
 Femme|Woman
@@ -240,8 +241,9 @@ Date de naissance|Date of birth
 J’ai lu et j’accepte le|I have read and accept the
 règlement et les conditions d’utilisation|rules and terms of use
 pour cette démonstration.|for this demo.
-Je souhaite recevoir la newsletter et mon bilan mensuel La Manivelle par e-mail et être contacté par La Manivelle pour répondre à quelques questions destinées à notre base de données.|I would like to receive the La Manivelle newsletter and my monthly summary by email and to be contacted by the Manivelle to ask some questions for our database.
-Facultatif. Vous pourrez changer d’avis à tout moment.|Optional. You can change your mind at any time.
+Je souhaite recevoir la newsletter de La Manivelle par e-mail.|I would like to receive the La Manivelle newsletter by email.
+J’accepte d’être contacté(e) par téléphone pour une courte enquête visant à améliorer les services de La Manivelle.|I agree to be contacted by phone for a short survey to help improve La Manivelle’s services.
+Ces deux choix sont facultatifs.|Both choices are optional.
 Créer mon compte|Create my account
 Se connecter et retrouver mon panier|Log in and return to my cart
 Déjà un compte ?|Already have an account?
