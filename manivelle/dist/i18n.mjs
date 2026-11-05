@@ -213,6 +213,7 @@ Valider la réservation|Confirm reservation
 Se connecter et réserver|Log in and reserve
 Démonstration · aucun paiement réel|Demo · no real payment
 Inscription|Registration
+Afin de tenir notre base de données à jour, les profils sans activité sur le site après leur inscription seront supprimés après trois mois consécutifs d’inactivité.|To keep our database clean, profiles without any activity on the website after registration will be removed after three consecutive months of inactivity.
 Vous devez avoir plus de 18 ans pour créer un compte.|You must be at least 18 years old to create an account.
 Retrouvez votre sélection et poursuivez votre réservation.|Find your selection and continue your reservation.
 Prototype de démonstration : utilisez des coordonnées et un mot de passe fictifs. Les données restent dans ce navigateur.|Demo prototype: use fictional contact details and a test password. Your data stays in this browser.
@@ -239,7 +240,7 @@ Date de naissance|Date of birth
 J’ai lu et j’accepte le|I have read and accept the
 règlement et les conditions d’utilisation|rules and terms of use
 pour cette démonstration.|for this demo.
-Je souhaite recevoir la newsletter et mon bilan mensuel La Manivelle par e-mail.|I would like to receive the La Manivelle newsletter and my monthly summary by email.
+Je souhaite recevoir la newsletter et mon bilan mensuel La Manivelle par e-mail et être contacté par La Manivelle pour répondre à quelques questions destinées à notre base de données.|I would like to receive the La Manivelle newsletter and my monthly summary by email and to be contacted by the Manivelle to ask some questions for our database.
 Facultatif. Vous pourrez changer d’avis à tout moment.|Optional. You can change your mind at any time.
 Créer mon compte|Create my account
 Se connecter et retrouver mon panier|Log in and return to my cart
